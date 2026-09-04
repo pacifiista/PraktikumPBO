@@ -2,12 +2,27 @@ package jobsheet2;
 
 public class main {
     public static void main(String[] args) {
-        account19 original = new account19("Nadia", 500000);
-        account19 copy = original;
-        copy.deposit(100000);
+        account19 [] acc = new account19[3];
+        acc[0] = new account19("Nadia", 500000);
+        acc[0].withdraw(150000);
 
-        System.out.println("Via original: " +original.balance);
-        System.out.println("Via copy: " +copy.balance);
+        acc[1] = new account19("Budi", 1000000);
+
+        acc[2] = new account19("Siti", 750000);
+        acc[2].withdraw(200000);
+
+        for (account19 account19 : acc) {
+            account19.printInfo();
+        }
+
+
+
+        // account19 original = new account19("Nadia", 500000);
+        // account19 copy = original;
+        // copy.deposit(100000);
+
+        // System.out.println("Via original: " +original.balance);
+        // System.out.println("Via copy: " +copy.balance);
 
 
         // account19 acc = new account19("Nadia", 500000);
