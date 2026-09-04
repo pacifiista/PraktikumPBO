@@ -34,6 +34,12 @@ public class account19 {
     public boolean isBalanceNegative() {
         return balance < 0; // Mengembalikan true jika saldo negatif, false jika tidak
     }
+
+    // tugas mandiri
+    public void transferTo(account19 target, double amount) {
+        this.withdraw(amount); // Tarik dari akun ini
+        target.deposit(amount); // Setor ke akun target
+    }
 }
 
 
