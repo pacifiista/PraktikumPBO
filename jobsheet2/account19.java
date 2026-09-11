@@ -9,7 +9,7 @@ public class account19 {
     public account19(String Ownername, double balance) {
         this.Ownername = Ownername;
         this.balance = balance;
-    }
+    } 
 
     public void deposit(double amount){
         balance += amount;
