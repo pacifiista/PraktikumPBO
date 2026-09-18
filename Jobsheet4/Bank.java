@@ -26,6 +26,24 @@ public class Bank {
         return null;
     }
 
+    // Menambahkan method findAccounntsByOwnerName
+    public Account19[] findAccount19sByOwnerName(String name) {
+        int matchCount = 0;
+        for (int i = 0; i < count; i++) {
+            if (account19s[i].getOwner().getName().equals(name)) {
+                matchCount++;
+            }
+        }
+        Account19[] matches = new Account19[matchCount];
+        int index = 0;
+        for (int i = 0; i < count; i++) {
+            if (account19s[i].getOwner().getName().equals(name)) {
+                matches[index] = account19s[i];
+                index++;
+            }
+        }
+        return matches;
+    }
     public void printAllAccounts(){
         for (int i = 0; i < count; i++) {
             account19s[i].printInfo();

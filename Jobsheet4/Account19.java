@@ -12,6 +12,11 @@ public class Account19 {
       this.balance = balance;
    }
 
+   // tambahkan getter owner
+   public Customer getOwner(){
+      return owner;
+   }
+
    public String getAccountNumber () {
       return accountNumber;
    }

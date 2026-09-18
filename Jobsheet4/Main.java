@@ -19,6 +19,14 @@ public class Main {
         if (found != null) {
             found.printInfo();
         }
+        System.out.println();
+        
+        // cari berdasarkan nama pemilik
+        System.out.println("Cari Nama pemilik rekening");
+        Account19[] NauraAccounts = bank.findAccount19sByOwnerName("Naura");
+        for (Account19 acc : NauraAccounts) {
+            acc.printInfo();
+        }
     }
 }
 
