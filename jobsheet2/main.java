@@ -9,6 +9,7 @@ public class main {
         acc[0].withdraw(150000);
 
         acc[1] = new account19("Budi", 1000000);
+        acc[1] = new account19("oi", 90);
 
         acc[2] = new account19("Siti", 750000);
         acc[2].withdraw(200000);
