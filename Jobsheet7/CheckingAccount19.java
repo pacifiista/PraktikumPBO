@@ -19,6 +19,7 @@ public class CheckingAccount19 extends Account19 {
 
     @Override 
     public void printInfo() {
+        super.printInfo();
         System.out.println("Accoun type: Checking, overdraft limit: " + overdraftLimit);
     }
 }
