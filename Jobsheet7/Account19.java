@@ -26,6 +26,13 @@ public class Account19 {
 
    }
 
+   public boolean deposit(double amount) {
+      if (amount <= 0) {
+         return false;
+      }
+      balance += amount;
+      return true;
+   }
    public boolean deposit(double amount, String note) {
       if (!deposit(amount)) {
          return false;
