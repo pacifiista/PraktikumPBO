@@ -2,19 +2,11 @@ package Jobsheet7;
 
 public class main {
     public static void main(String[] args) {
-       Customer customer1 = new Customer("Rian", "0812-0000-0003");
-        SavingAccount19 savings = new SavingAccount19("A003", customer1, 100000, 0.02);
-        savings.withdraw(70000);
+       Customer customer = new Customer("Rian", "0812-0000-0003");
+       SavingAccount19 savings = new SavingAccount19("A003", customer, 100000, 0.02);
 
-        Customer customer2 = new Customer("Dewi", "0812-0000-0004");
-        CheckingAccount19 checking = new CheckingAccount19("A004", customer2, 100000, 200000);
-        boolean result = checking.withdraw(250000);
-        System.out.println("Withdraw 250000 allowed? " + result);
-
-        Bank bank = new Bank(10);
-        bank.addAccount(savings);
-        bank.addAccount(checking);
-        bank.printAllAccounts();
+       savings.deposit(50000, "Initial top-up");
+       savings.printInfo();
     }
 
 }

@@ -1,6 +1,7 @@
 package Jobsheet7;
 
 public class BusinessAccount19 extends Account19 {
+    private static final double MIN_BALANCE = 1000000;
     private double monthlyTransactionFee;
 
     public BusinessAccount19(String accountNumber, Customer owner, double balance, double monthlyTransactionFee ) {
@@ -8,12 +9,14 @@ public class BusinessAccount19 extends Account19 {
         this.monthlyTransactionFee = monthlyTransactionFee;
     }
 
-    public double getMonthlyTransactionFee() {
-        return monthlyTransactionFee;
-    }
+    @Override
+    protected boolean canWithdraw(double amount) {
+    return super.canWithdraw(amount) && (getBalance() - amount >= MIN_BALANCE);
+   }
 
-    public void printAccountType() {
-        System.out.println("Account type: Business, monthly fee: " + monthlyTransactionFee);
-    }
-
+   @Override
+   public void printInfo() {
+      super.printInfo(); // baris milik Account
+      System.out.println("Jenis rekening: Business Account - monthly fee: " + monthlyTransactionFee);
+   }
 }
