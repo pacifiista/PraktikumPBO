@@ -22,6 +22,11 @@ public class main {
         bank.addAccount(acc3);
         bank.printAllAccounts();
         acc3.printAccountType();
+
+        System.out.println("jadi total acc 1: " + acc1);
+        System.out.println("Jadi total acc 2 : " + acc2);
+        System.out.println("jadi total acc 3: " + acc3);
+
     }
 
 }
