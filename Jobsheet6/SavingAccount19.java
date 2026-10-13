@@ -13,5 +13,6 @@ public class SavingAccount19 extends Account19 {
 
     public void printAccountType() {
         System.out.println("Account type: Savings, interest rate: " + interestRate);
+        System.out.println("Halo");
     }
 }
