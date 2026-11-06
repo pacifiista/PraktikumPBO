@@ -25,7 +25,8 @@ public class Main {
         Customer customer2 = new Customer("Sari", "0812-0000-0002");
         CheckingAccount acc2 = new CheckingAccount("A002", customer2, 200000, 50000);
 
-        Bank bank = new Bank();
+        Bank bank = new Bank(new InMemoryAccountRepository());
+        // Bank bank = new Bank();
         bank.addAccount(acc1);
         bank.addAccount(acc2);
         bank.addAccount(saving);
