@@ -4,9 +4,8 @@ package Jobsheet11;
 // import java.util.Map; 
 
 public class Bank {
- private AccountRepository repository;
+    private AccountRepository repository;
 
- // Bank menerima interface AccountRepository, bukan membuat Map sendiri
     public Bank(AccountRepository repository) {
         this.repository = repository;
     }
@@ -26,12 +25,6 @@ public class Bank {
     public void printAllAccounts() {
         for (Account acc : repository.findAll()) {
             acc.printInfo();
-        }
-    }
-
-    public void printMonthlyFees() {
-        for (Account acc : repository.findAll()) {
-            System.out.println(acc.getAccountNumber() + " fee: " + acc.monthlyFee());
         }
     }
 
@@ -55,9 +48,7 @@ public class Bank {
             System.out.println(accountNumber + " " + t);
         }
     }
-
- }
-
+}
  //    private Map<String, Account> accounts = new LinkedHashMap<>();
 
 //    public boolean addAccount(Account account) {
